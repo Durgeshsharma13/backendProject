@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <% blogs.forEach(blog=> { %>
+        <ul class="blog">
+            <li>
+                <%= blog.name %>
+            </li>
+            <li>
+                <%= blog.class %>
+            </li>
+            <li>
+                <%= blog.blog %>
+            </li>
+            <button><a href="/delete/<%= blog._id%>">Delete</a></button>
+            <button><a href="/update/<%= blog._id%>">Update</a></button>
+        </ul>
+        <% }); %>
+
+</body>
+
+</html>
